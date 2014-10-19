@@ -151,7 +151,7 @@ SortedTbl <- arrange(StepsPerInterval, desc(AvgSteps))
 ```
 
 
-The 5-minute interval, on average across all the days in the dataset, that contains the maximum number of  steps is 835.
+**The 5-minute interval, on average across all the days in the dataset, that contains the maximum number of  steps is 835**.
 
 ### Step 4: How do you deal with Imputing missing values and what is its impact on the mean and the median? 
 
@@ -162,7 +162,7 @@ We now answer the series of questions given to us.
 #Computing the number of rows with a missing value
 NumRowsMissingVals <- sum(!complete.cases(ActivityDFTbl))
 ```
-The number of rows with missing values are 2304.
+**The number of rows with missing values are 2304**.
 
 We create a new table, named **NewTable**, with the missing values substituted by 
 the average number of steps per interval computed earlier and stored in the data table **StepsPerInterval**. Note that for each interval, this average number of steps is different and we need to use the right number in each row of **NewTable**. 
@@ -184,7 +184,7 @@ NewVals <- byDateMeanMedian(NewTable)
 
 ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
 
-**Comparing the mean and the median**: With the missing values substituted, the values of the mean and the median are 1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup>, respectively. When the missing values were ignored the corresponsing numbers were 1.0766189 &times; 10<sup>4</sup> and 1.0765 &times; 10<sup>4</sup>. 
+**Comparing the mean and the median: With the missing values substituted, the values of the mean and the median are 1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup>, respectively. When the missing values were ignored the corresponsing numbers were 1.0766189 &times; 10<sup>4</sup> and 1.0765 &times; 10<sup>4</sup>**. 
 
 With the substitution scheme used by us, the mean and the median were both equal to the mean of the original calculation, by ignoring the missing values. 
  
@@ -290,10 +290,4 @@ xyplot(AvgStepsPerInterval~interval|DayOfWeek, SummaryTable, layout = c(1,2), ty
 - on weekdays there is a marked spike in the activity reaching beyond 200 steps, between 800 to 950 intervals and on weenends this spike is not so marked. 
 
 - on weekdays the activity starts subsiding around 1900 intervals whereas during the weenends it subsides only at 2000 intervals. 
-
-
-
-
-
-
 
